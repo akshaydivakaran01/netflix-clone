@@ -1,0 +1,120 @@
+.top10-container {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.top10-title {
+    margin-bottom: 15px;
+}
+
+.top10-card-list {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.top10-card-list::-webkit-scrollbar {
+    display: none;
+}
+
+.top10-card {
+    display: flex;
+    text-decoration: none;
+    box-sizing: border-box;
+    position: relative;
+    right: 50px;
+}
+
+.top10-rank {
+    max-height: 190px;
+}
+
+
+.top10-rank p{
+    font-size: 16rem;
+    font-weight: 900;
+    position: relative;
+    font-family: 'Roboto';
+    bottom: 57px;
+    left: 46px;
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: rgb(98, 98, 98);
+}
+
+ .top10-image {
+    width: 140px;
+    max-height: 190px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.top10-card:hover {
+    transform: scale(0.95);
+}
+
+@media (min-width: 801px) and (max-width: 1024px) {
+    .top10-title{
+        font-size: 24px;
+    }
+    .top10-card-list {
+        gap: 10px;
+    }
+    .top10-rank {
+        max-height: 170px;
+    }
+    .top10-rank p{
+        font-size: 15rem;
+        bottom: 53px;
+        left: 43px;
+    }   
+     .top10-image {
+        width: 135px;
+        max-height: 180px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 800px){
+    .top10-title{
+        font-size: 20px;
+    }
+    .top10-card-list {
+        gap: 0;
+    }
+    .top10-rank {
+        max-height: 167px;
+    }
+    .top10-rank p{
+        font-size: 13.4rem;
+        bottom: 46px;
+        left: 41px;
+    }   
+     .top10-image {
+        width: 123px;
+        max-height: 160px;
+    }
+
+}
+
+@media (min-width: 300px) and (max-width: 480px) {
+    .top10-title{
+        font-size: 18px;
+    }
+    .top10-card-list {
+        gap: 0;
+    }
+    .top10-rank {
+        max-height: 150px;
+    }
+    .top10-rank p {
+        font-size: 11.5rem;
+        bottom: 40px;
+        left: 44px;
+    } 
+     .top10-image {
+        width: 100px;
+        max-height: 140px;
+        left: 10px;
+    }
+}
