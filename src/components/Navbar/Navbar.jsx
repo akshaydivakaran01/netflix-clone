@@ -12,13 +12,13 @@ const Navbar = () => {
 
     const navRef = useRef(null);
 
-    useEffect(() =>{
+    useEffect(() => {
         window.addEventListener('scroll', () => {
             if (navRef.current) {
                 if(window.scrollY >= 80){
                     navRef.current.classList.add('nav-dark');
                 }
-                else{
+                else {
                     navRef.current.classList.remove('nav-dark');
                 }
             }
@@ -28,7 +28,8 @@ const Navbar = () => {
   return (
     <div ref={navRef} className='navbar'>
         <div className="navbar-left">
-            <img src={logo} alt="Netflix-logo" />
+            <img src={logo} 
+                 alt="Netflix-logo" />
             <ul>
                 <li>Home</li>
                 <li>TV Shows</li>
@@ -39,12 +40,19 @@ const Navbar = () => {
             </ul>
         </div>    
         <div className="navbar-right">
-            <img src={search_icon} className='icons' alt="Search-icon" />
+            <img src={search_icon} 
+                 className='icons' 
+                 alt="Search-icon" />
             <p>Children</p>
-            <img src={notification_icon} className='icons' alt="Notification-icon" />
+            <img src={notification_icon} 
+                 className='icons' 
+                 alt="Notification-icon" />
             <div className="navbar-profile">
-                <img src={profile_img} className='profile' alt="profile-icon" />
-                <img src={caret_icon} alt="Dropdown-icon" />
+                <img src={profile_img} 
+                     className='profile' 
+                     alt="profile-icon" />
+                <img src={caret_icon} 
+                     alt="Dropdown-icon" />
                 <div className='dropdown'>
                     <p onClick={() => {
                         logout()

@@ -10,12 +10,12 @@
     margin: 40px 0;
 }
 
-.footer-icons img{
+.footer-icons img {
     width: 30px;
     cursor: pointer;
 }
 
-.footer ul{
+.footer ul {
     display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 15px;
@@ -23,11 +23,11 @@
     list-style-type: none;
 }
 
-.footer ul li{
+.footer ul li {
     color: grey;
 }
 
-.footer ul li:hover{
+.footer ul li:hover {
     text-decoration: underline;
 }
 

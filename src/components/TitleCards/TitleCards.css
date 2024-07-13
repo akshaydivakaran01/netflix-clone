@@ -42,7 +42,7 @@
 }
 
 @media (min-width: 801px) and (max-width: 1024px) {
-    .title-cards h2{
+    .title-cards h2 {
         font-size: 24px;
     }
     .card-list img {
@@ -57,10 +57,10 @@
         margin-top: 20px;
         margin-bottom: 0;
     }
-    .title-cards h2{
+    .title-cards h2 {
         font-size: 20px;
     }
-    .card-list{
+    .card-list {
         gap: 10px;
     }
     .card-list img {
@@ -74,10 +74,10 @@
         margin-top: 20px;
         margin-bottom: 0;
     }
-    .title-cards h2{
+    .title-cards h2 {
         font-size: 18px;
     }
-    .card-list{
+    .card-list {
         gap: 10px;
     }
     .card-list img {

@@ -27,5 +27,5 @@ export const getData = (endpoint) => {
 
     return(fetch('https://api.themoviedb.org/3/' +  endpoint, options)
     .then(response => response.json())
-    .catch(err => console.error(err)))
+    .catch(err => console.error(err)));
 }

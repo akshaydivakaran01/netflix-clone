@@ -31,7 +31,7 @@
 }
 
 
-.top10-rank p{
+.top10-rank p {
     font-size: 16rem;
     font-weight: 900;
     position: relative;
@@ -43,7 +43,7 @@
     -webkit-text-stroke-color: rgb(98, 98, 98);
 }
 
- .top10-image {
+.top10-image {
     width: 140px;
     max-height: 190px;
     border-radius: 8px;
@@ -55,7 +55,7 @@
 }
 
 @media (min-width: 801px) and (max-width: 1024px) {
-    .top10-title{
+    .top10-title {
         font-size: 24px;
     }
     .top10-card-list {
@@ -64,7 +64,7 @@
     .top10-rank {
         max-height: 170px;
     }
-    .top10-rank p{
+    .top10-rank p {
         font-size: 15rem;
         bottom: 53px;
         left: 43px;
@@ -76,7 +76,7 @@
 }
 
 @media (min-width: 481px) and (max-width: 800px){
-    .top10-title{
+    .top10-title {
         font-size: 20px;
     }
     .top10-card-list {
@@ -85,7 +85,7 @@
     .top10-rank {
         max-height: 167px;
     }
-    .top10-rank p{
+    .top10-rank p {
         font-size: 13.4rem;
         bottom: 46px;
         left: 41px;
@@ -98,7 +98,7 @@
 }
 
 @media (min-width: 300px) and (max-width: 480px) {
-    .top10-title{
+    .top10-title {
         font-size: 18px;
     }
     .top10-card-list {

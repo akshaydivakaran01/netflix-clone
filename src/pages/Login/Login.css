@@ -63,7 +63,6 @@
     font-size: 13px;
 }
 
-
 .remember {
     display: flex;
     align-items: center;
@@ -80,7 +79,7 @@
     color: #737373;
 }
 
-.form-switch span{
+.form-switch span {
     margin-left: 6px;
     color: #fff;
     font-weight: 500;
@@ -107,7 +106,6 @@
     .login {
         padding: 15px 5%;
     }
-
     .login-form {
         margin-top: 50px;
         padding: 15px 5%;

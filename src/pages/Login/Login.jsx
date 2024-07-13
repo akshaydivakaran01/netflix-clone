@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import './Login.css'
 import logo from '../../assets/Netflix_Logo.png'
-import { signup, login } from '../../firebase'
 import netflix_spinner from '../../assets/netflix_spinner.gif'
+import { signup, login } from '../../firebase'
 
 const Login = () => {
-    const [signState, setSignState] = useState('Sign In')
+    const [signState, setSignState] = useState('Sign In');
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -24,53 +24,60 @@ const Login = () => {
     }
   
     return (
-    loading? 
+    loading ? 
     <div className="login-spinner"> 
-        <img src={netflix_spinner} alt="loading" /> 
+        <img src={netflix_spinner} 
+             alt="loading" /> 
     </div> :
 
     <div className='login'>
-        <img src={logo} className='login-logo' alt="Login-Logo" />
+        <img src={logo} 
+             className='login-logo' 
+             alt="Login-Logo" />
         <div className="login-form">
             <h1>{signState}</h1>
             <form>
-                {signState==="Sign Up"? 
+                { signState === "Sign Up" ? 
                 <input type="text" 
-                placeholder='Your name'
-                value={name} 
-                onChange={(e) =>{
-                    setName(e.target.value)
-                }}/>: <></>}
+                       placeholder='Your name'
+                       value={name} 
+                       onChange={(e) => {
+                        setName(e.target.value)
+                       }}/> : <></>
+                }
                 <input type="email" 
-                placeholder='Email'
-                value={email} 
-                onChange={(e) =>{
-                    setEmail(e.target.value)
-                }}/>
+                       placeholder='Email'
+                       value={email} 
+                       onChange={(e) => {
+                        setEmail(e.target.value)
+                       }}/>                     
                 <input type="password" 
-                placeholder='Password'
-                value={password} 
-                onChange={(e) =>{
-                    setPassword(e.target.value)
-                }}/>
+                       placeholder='Password'
+                       value={password} 
+                       onChange={(e) => {
+                        setPassword(e.target.value)
+                       }}/>
                 <button type='submit'
-                onClick={user_auth}>{signState}</button>
+                        onClick={user_auth}>{signState}</button>
                 <div className="form-help">
                     <div className="remember">
-                        <input type="checkbox" name="remember" id="remember" />
+                        <input type="checkbox" 
+                               name="remember" 
+                               id="remember" />
                         <label htmlFor="remember">Remember Me</label>
                     </div>
                     <p>Need Help?</p>
                 </div>
             </form>
             <div className="form-switch">
-                {signState === "Sign In"?
-                <p>New to Netflix? <span onClick={() =>{
+                { signState === "Sign In" ?
+                <p>New to Netflix? <span onClick={() => {
                     setSignState(("Sign Up"))
                 }}>Sign Up Now</span></p> :
-                <p>Already have account? <span onClick={() =>{
+                <p>Already have account? <span onClick={() => {
                     setSignState(("Sign In"))
-                }}>Sign In Now</span></p>}
+                }}>Sign In Now</span></p>
+                }
             </div>
         </div>
     </div>

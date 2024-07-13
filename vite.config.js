@@ -6,3 +6,4 @@ export default defineConfig({
   base: '/netflix-clone',
   plugins: [react()],
 })
+

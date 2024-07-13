@@ -6,7 +6,7 @@ import { getData } from '../../constants'
 
 const TopTenList = ({title, endpoint}) => {
 
-    const [apiData, setApiData] = useState([])
+    const [apiData, setApiData] = useState([]);
     
     useEffect(() =>{
     
@@ -24,13 +24,16 @@ const TopTenList = ({title, endpoint}) => {
         <div className="top10-card-list">
             {apiData.map((card, index) => {
                 return (
-                    index <= 9?
+                    index <= 9 ?
                     <Link to={`/player/${card.id}`} className="top10-card" key={index}>
                         <div className="top10-rank"><p>{index + 1}</p></div>
-                        <img src={`https://image.tmdb.org/t/p/w500` + card.poster_path} alt="Poster" className="top10-image" />
+                        <img src={`https://image.tmdb.org/t/p/w500` + card.poster_path} 
+                             alt="Poster" 
+                             className="top10-image" />
                     </Link> : ''
                 )
-            })}
+            }
+            )}
         </div>
     </div>
   )

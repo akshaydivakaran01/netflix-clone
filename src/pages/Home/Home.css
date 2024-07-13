@@ -43,7 +43,7 @@
     width: 25px;
 }
 
-.hero-btns  .btn{
+.hero-btns  .btn {
     border: 0;
     outline: 0;
     padding: 10px 25px;
@@ -92,7 +92,7 @@
     .hero-btns {
         gap: 25px;
     }
-    .hero-btns  .btn{
+    .hero-btns  .btn {
         padding: 15px 30px;
         font-size: 20px;
     }   
@@ -130,7 +130,7 @@
     .hero-btns {
         gap: 15px;
     }
-    .hero-btns  .btn{
+    .hero-btns  .btn {
         padding: 10px 25px;
         font-size: 13px;
     }
@@ -161,7 +161,7 @@
     .hero-btns {
         gap: 15px;
     }
-    .hero-btns  .btn{
+    .hero-btns  .btn {
         padding: 5px 15px;
         font-size: 10px;
     }
@@ -195,7 +195,7 @@
     .hero-btns {
         gap: 10px;
     }
-    .hero-btns  .btn{
+    .hero-btns  .btn {
         padding: 5px 8px;
         font-size: 6px;
     }

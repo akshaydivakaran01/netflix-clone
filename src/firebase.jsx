@@ -1,8 +1,7 @@
-
-import { initializeApp } from "firebase/app";
-import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
-import { addDoc, collection, getFirestore } from "firebase/firestore";
-import { toast } from "react-toastify";
+import { initializeApp } from "firebase/app"
+import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth"
+import { addDoc, collection, getFirestore } from "firebase/firestore"
+import { toast } from "react-toastify"
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_API_KEY,

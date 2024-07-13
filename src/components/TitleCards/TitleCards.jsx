@@ -5,7 +5,7 @@ import { getData } from '../../constants'
 
 const TitleCards = ({title, endpoint}) => {
 
-  const [apiData, setApiData] = useState([])
+  const [apiData, setApiData] = useState([]);
 
   useEffect(() =>{
 
@@ -18,17 +18,17 @@ const TitleCards = ({title, endpoint}) => {
 
   return (
     <div className='title-cards'>
-        <h2>{title? title: 'Popular on Netflix'}</h2>
-        <div className="card-list">
-            {apiData.map((card, index) => {
-                return(
-                    <Link to={`/player/${card.id}`} className="card" key={index}>
-                        <img src={`https://image.tmdb.org/t/p/w500` + card.poster_path} alt="Poster" />
-                    </Link>
-                )
-            }
+      <h2>{title? title: 'Popular on Netflix'}</h2>
+      <div className="card-list">
+        {apiData.map((card, index) => {
+          return(
+            <Link to={`/player/${card.id}`} className="card" key={index}>
+                <img src={`https://image.tmdb.org/t/p/w500` + card.poster_path} alt="Poster" />
+            </Link>
+          )
+          }
         )}
-        </div>
+      </div>
     </div>
   )
 }
