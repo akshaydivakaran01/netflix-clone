@@ -7,7 +7,7 @@
     font-size: 14px;
     color: #e5e5e5;
     background-image: linear-gradient(180deg, rgba(0,0,0,0.7) 10%, transparent);
-    z-index: 1;
+    z-index: 3;
 }
 
 .navbar-left {
@@ -64,6 +64,14 @@
     position: relative;
 }
 
+.navbar-profile img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-profile:hover .dropdown-icon{
+    transform: rotate(180deg);
+}
+
 .navbar .dropdown {
     position: absolute;
     top: 100%;
@@ -91,6 +99,28 @@
 
 .nav-dark {
     background-color: #141414;
+}
+
+.profile-item {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-item img {
+    border-radius: 4px;
+}
+
+.profile-item span:hover {
+   text-decoration: underline;
+}
+
+.settings {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 @media (min-width: 1600px) and (max-width: 2500px) {
@@ -170,6 +200,19 @@
         width: 25px;
     }
 
+    .settings {
+        margin-top: 15px;
+        gap: 10px;
+    }
+
+    .profile-item img {
+        width: 20px;
+    }
+
+    .profile-item span {
+        font-size: 8px;
+    }
+
     .navbar .dropdown {
         right: 0px;
         width: 113px;
@@ -186,7 +229,7 @@
     }
 }
 
-@media (min-width: 300px) and (max-width: 480px) {
+@media (min-width: 100px) and (max-width: 480px) {
     .navbar {
         padding: 10px 3%;
     }
@@ -209,6 +252,19 @@
 
     .navbar-right .profile {
         width: 20px;
+    }
+
+    .settings {
+        margin-top: 10px;
+        gap: 8px;
+    }
+
+    .profile-item img {
+        width: 15px;
+    }
+
+    .profile-item span {
+        font-size: 7px;
     }
 
     .navbar .dropdown {

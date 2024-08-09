@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export const imageUrl = 'https://image.tmdb.org/t/p/original'
 
 export const Data_List = {now_playing_movies: "movie/now_playing?language=en-US&page=1",
@@ -17,15 +19,22 @@ export const Data_List = {now_playing_movies: "movie/now_playing?language=en-US&
 const TMDB_ACCESS_TOKEN = import.meta.env.VITE_TMDB_ACCESS_TOKEN
 
 export const getData = (endpoint) => {
-    const options = {
-        method: 'GET',
+    const options = { 
         headers: {
           accept: 'application/json',
           Authorization: 'Bearer ' + TMDB_ACCESS_TOKEN
         }
       }
 
-    return(fetch('https://api.themoviedb.org/3/' +  endpoint, options)
-    .then(response => response.json())
+    return (axios.get('https://api.themoviedb.org/3/' + endpoint, options)
+    .then(response => response.data)
     .catch(err => console.error(err)));
 }
+
+export const getTruncatedText = (text, length) => {
+  if (!text) return '';
+  if (text.length <= length) return text;
+  const truncated = text.substring(0, length);
+  const lastSpaceIndex = truncated.lastIndexOf(' ');
+  return lastSpaceIndex === -1 ? truncated : truncated.substring(0, lastSpaceIndex);
+};

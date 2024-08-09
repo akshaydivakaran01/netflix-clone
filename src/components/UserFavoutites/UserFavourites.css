@@ -1,0 +1,126 @@
+.fav {
+    width: 100%;
+    min-height: 100vh;
+    max-height: fit-content;
+}
+
+.btn-area {
+    padding: 100px 6% 0;
+}
+
+.switch-btn  {
+    background-color: transparent;
+    color: rgb(121, 116, 116);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    font-size: 1.4rem;
+    width: fit-content;
+    cursor: pointer;
+    margin-right: 50px;
+  }
+  
+  .active {
+    color: #ffffff;
+  }
+
+  .fav-list {
+    padding: 40px 6%;
+  }
+  
+.fav-container {
+    display: flex;
+    gap: 50px;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.fav-card .poster {
+    width: 160px;
+    max-height: 215px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.fav-card img:hover {
+    transform: scale(1.05);
+}
+
+.fav-card {
+    position: relative;
+}
+
+.close-icon, .play-icon {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.close-icon {
+    top: 8px;
+    right: 8px;
+    width: 15px;
+}
+
+.play-icon {
+    top: 40%;
+    right: 35%;
+    width: 40px;
+}
+
+.fav-card:hover .poster {
+    opacity: 0.5;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fav-card:hover .close-icon, .fav-card:hover .play-icon {
+    opacity: 1;
+}
+
+@media (min-width: 481px) and (max-width: 800px){
+
+    .btn-area {
+        padding: 90px 6% 0;
+    }
+    
+    .switch-btn  {
+        font-size: 1.2rem;
+    }
+
+    .fav-card .poster {
+        width: 140px;
+        max-height: 190px;
+    }
+
+    .play-icon {
+        width: 35px;
+    }
+}
+
+@media (min-width: 100px) and (max-width: 480px) {
+
+    .btn-area {
+        padding: 60px 6% 0;
+    }
+
+    .switch-btn  {
+        font-size: 0.7rem;
+        margin-right: 30px;
+    }
+    
+        .fav-card .poster {
+            width: 100px;
+            max-height: 130px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    
+        .play-icon {
+            width: 25px;
+        }
+
+        .close-icon {
+            width: 10px;
+        }
+}

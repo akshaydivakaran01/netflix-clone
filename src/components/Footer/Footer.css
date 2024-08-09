@@ -40,6 +40,7 @@
     .footer-icons img {
         width: 25px;
     }
+    
     .footer ul {
         grid-template-columns: auto auto;
         gap: 8px;
