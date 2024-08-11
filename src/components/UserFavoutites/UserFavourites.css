@@ -18,15 +18,15 @@
     width: fit-content;
     cursor: pointer;
     margin-right: 50px;
-  }
+}
   
-  .active {
+.active {
     color: #ffffff;
-  }
+}
 
-  .fav-list {
+.fav-list {
     padding: 40px 6%;
-  }
+}
   
 .fav-container {
     display: flex;
@@ -78,7 +78,7 @@
     opacity: 1;
 }
 
-@media (min-width: 481px) and (max-width: 800px){
+@media (min-width: 481px) and (max-width: 800px) {
 
     .btn-area {
         padding: 90px 6% 0;
@@ -109,18 +109,18 @@
         margin-right: 30px;
     }
     
-        .fav-card .poster {
-            width: 100px;
-            max-height: 130px;
-            border-radius: 10px;
-            cursor: pointer;
-        }
+    .fav-card .poster {
+        width: 100px;
+        max-height: 130px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
     
-        .play-icon {
-            width: 25px;
-        }
+    .play-icon {
+        width: 25px;
+    }
 
-        .close-icon {
-            width: 10px;
-        }
+    .close-icon {
+        width: 10px;
+    }
 }

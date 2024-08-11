@@ -7,9 +7,9 @@ export function useAppContext() {
 }
 
 export function AppProvider({ children }) {
-    const [myList, setMyList] = useState([])
-    const [likedList, setLikedList] = useState([])
-    const [isDisplayFavorites, setIsDisplayFavorites] = useState(false)
+    const [myList, setMyList] = useState([]);
+    const [likedList, setLikedList] = useState([]);
+    const [isDisplayFavorites, setIsDisplayFavorites] = useState(false);
 
     const data = {
         myList, 

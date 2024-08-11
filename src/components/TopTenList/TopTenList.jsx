@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react'
-import './TopTenList.css'
-import { getData } from '../../constants'
-import right_arrow from '../../assets/right_arrow.png'
-import left_arrow from '../../assets/left_arrow.png'
-import CardPopup from '../CardPopup/CardPopup'
+import React, { useState, useEffect, useRef } from 'react';
+import './TopTenList.css';
+import { getData } from '../../constants';
+import right_arrow from '../../assets/right_arrow.png';
+import left_arrow from '../../assets/left_arrow.png';
+import CardPopup from '../CardPopup/CardPopup';
 
 
 const TopTenList = ({title, endpoint}) => {
@@ -54,10 +54,9 @@ const TopTenList = ({title, endpoint}) => {
           left: `${rect.left + rect.width / 2}px`, 
           transform: 'translateX(-58%) scale(0.8)',
           transition: 'transform 0.3s ease-in-out',
-          position: 'fixed',
         });
       }
-        }, 300);
+        }, 400);
         setPopupTimeout(timeoutId);
       };
     
@@ -69,8 +68,7 @@ const TopTenList = ({title, endpoint}) => {
         }
       };
     
-    useEffect(() =>{
-    
+    useEffect(() => {
         getData(endpoint)
         .then(response => setApiData(response.results))
         .catch(error => {
@@ -82,7 +80,6 @@ const TopTenList = ({title, endpoint}) => {
       const handleWindowScroll = () => {
         setHoveredCard(null);
       };
-  
       window.addEventListener('scroll', handleWindowScroll);
       return () => {
         window.removeEventListener('scroll', handleWindowScroll);
@@ -91,39 +88,42 @@ const TopTenList = ({title, endpoint}) => {
 
   return (
     <div className='top10-container'>
-        <h2 className='top10-title'>{title}</h2>
-        {showLeftArrow && 
-        (<button className="arrows left-arrow" onClick={scrollLeft}>
-            <img src={left_arrow} alt="Left Arrow" />
-        </button>)}
-        <div className="top10-card-list" ref={listRef} onScroll={handleScroll}>
-            {apiData.map((card, index) => {
-                return (
-                  index <= 9 &&
-                  (<div className="card-wrapper"
-                  key={index}
-                  ref={(el) => (cardRefs.current[index] = el)}
-                  onMouseEnter={(e) => handleMouseEnter(e, index)}
-                  onMouseLeave={handleMouseLeave}>
-                    <div className="top10-card" 
-                    key={index}>
-                        <div className="top10-rank"><p>{index + 1}</p></div>
-                        <img src={`https://image.tmdb.org/t/p/w500` + card.poster_path} 
-                             alt="Poster" 
-                             className="top10-image" />
-                    </div>
-                    {hoveredCard === index && <CardPopup  
-                    card={card} 
-                    isExpanded={isExpanded} 
-                    setIsExpanded={setIsExpanded} 
-                    popupStyle={popupStyle}/>}
-                  </div>)
-                )}
-            )}
-        </div>
-        <button className="arrows right-arrow" onClick={scrollRight}>
-            <img src={right_arrow} alt="Right Arrow" />
-        </button>
+      <h2 className='top10-title'> {title} </h2>
+
+      { showLeftArrow && 
+      (<button className="arrows left-arrow" onClick={scrollLeft}>
+          <img src={left_arrow} alt="Left Arrow" />
+      </button>) }
+
+      <div className="top10-card-list" ref={listRef} onScroll={handleScroll}>
+        { apiData.map((card, index) => {
+          return (
+            index <= 9 &&
+            (<div className="card-wrapper"
+              key={index}
+              ref={(el) => (cardRefs.current[index] = el)}
+              onMouseEnter={(e) => handleMouseEnter(e, index)}
+              onMouseLeave={handleMouseLeave}>
+              <div className="top10-card" key={index}>
+                <div className="top10-rank"><p>{index + 1}</p></div>
+                <img src={`https://image.tmdb.org/t/p/w500` + card.poster_path} 
+                  alt="Poster" 
+                  className="top10-image" />
+              </div>
+              { hoveredCard === index && <CardPopup  
+                card={card} 
+                isExpanded={isExpanded} 
+                setIsExpanded={setIsExpanded} 
+                popupStyle={popupStyle}/> }
+            </div>
+            )
+          )}
+        )}
+      </div>
+
+      <button className="arrows right-arrow" onClick={scrollRight}>
+        <img src={right_arrow} alt="Right Arrow" />
+      </button>
     </div>
   )
 }

@@ -1,10 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
-import './TitleCards.css'
-import { getData } from '../../constants'
-import right_arrow from '../../assets/right_arrow.png'
-import left_arrow from '../../assets/left_arrow.png'
-import CardPopup from '../CardPopup/CardPopup'
-import { useAppContext } from '../../context/appContext'
+import React, { useEffect, useRef, useState } from 'react';
+import './TitleCards.css';
+import { getData } from '../../constants';
+import right_arrow from '../../assets/right_arrow.png';
+import left_arrow from '../../assets/left_arrow.png';
+import CardPopup from '../CardPopup/CardPopup';
 
 const TitleCards = ({title, endpoint}) => {
 
@@ -14,8 +13,6 @@ const TitleCards = ({title, endpoint}) => {
   const [popupStyle, setPopupStyle] = useState({});
   const [isExpanded, setIsExpanded] = useState(false);
   const [popupTimeout, setPopupTimeout] = useState(null);
-
-  const {myList, likedList} = useAppContext();
 
   const listRef = useRef(null);
 
@@ -52,9 +49,8 @@ const TitleCards = ({title, endpoint}) => {
         left: `${rect.left + rect.width / 2}px`,
         transform: 'translateX(-50%) scale(0.8)',
         transition: 'transform 0.3s ease-in-out',
-        position: 'fixed',
       });
-    }, 300);
+    }, 400);
     setPopupTimeout(timeoutId);
   };
 
@@ -86,37 +82,36 @@ const TitleCards = ({title, endpoint}) => {
   return (
     <div className='title-cards'>
       <h2>{title? title: 'Popular on Netflix'}</h2>
-      {showLeftArrow && 
+      { showLeftArrow && 
       (<button 
-      className="arrow left-arrow" 
-      onClick={scrollLeft}>
+        className="arrow left-arrow" 
+        onClick={scrollLeft}>
         <img 
-        src={left_arrow} 
-        alt="Left Arrow" />
-      </button>)}
+          src={left_arrow} 
+          alt="Left Arrow" />
+      </button>) }
       <div 
-      className="card-list" 
-      ref={listRef} 
-      onScroll={handleScroll}>
+        className="card-list" 
+        ref={listRef} 
+        onScroll={handleScroll}>
         {apiData.map((card, index) => {
-          return(
+          return (
             <div 
               className="card-wrapper"
               key={index}
               onMouseEnter={(e) => handleMouseEnter(e, index)}
-              onMouseLeave={handleMouseLeave}
-            >
+              onMouseLeave={handleMouseLeave}>
               <div
-              className="card" 
-              key={index}>
+                className="card" 
+                key={index}>
                   <img src={`https://image.tmdb.org/t/p/w500` + card.poster_path} alt="Poster" />
               </div>
 
-              {hoveredCard === index && <CardPopup  
-              card={card} 
-              isExpanded={isExpanded} 
-              setIsExpanded={setIsExpanded} 
-              popupStyle={popupStyle}/>}
+              { hoveredCard === index && <CardPopup  
+                card={card} 
+                isExpanded={isExpanded} 
+                setIsExpanded={setIsExpanded} 
+                popupStyle={popupStyle}/> }
             </div>
           )
           }

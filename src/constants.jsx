@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export const imageUrl = 'https://image.tmdb.org/t/p/original'
 

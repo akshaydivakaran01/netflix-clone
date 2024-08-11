@@ -70,44 +70,48 @@
     cursor: pointer;
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
-  }
+}
 
-  .top10-container:hover .arrows {
+.top10-container:hover .arrows {
     opacity: 1;
-  }
+}
 
-  .arrows:hover {
+.arrows:hover {
     transform: translateY(-50%) scale(1.2); 
-  }
+}
   
-  .left-arrow {
+.left-arrow {
     left: 20px;
-  }
-  
-  .right-arrow {
+}
+
+.right-arrow {
     right: 40px;
-  }
-  
-  .arrows img {
+}
+
+.arrows img {
     width: 40px;
     height: 50px;
-  }
+}
 
 @media (min-width: 801px) and (max-width: 1024px) {
     .top10-title {
         font-size: 24px;
     }
+
     .top10-card-list {
         gap: 10px;
     }
+
     .top10-rank {
         max-height: 170px;
     }
+
     .top10-rank p {
         font-size: 15rem;
         bottom: 53px;
         left: 43px;
     }   
+
      .top10-image {
         width: 135px;
         max-height: 180px;
@@ -115,11 +119,11 @@
 
     .left-arrow {
         left: 5px;
-      }
+    }
       
-      .right-arrow {
+    .right-arrow {
         right: 5px;
-      }
+    }
 
     .arrow img {
         width: 35px;
@@ -131,17 +135,21 @@
     .top10-title {
         font-size: 20px;
     }
+
     .top10-card-list {
         gap: 0;
     }
+
     .top10-rank {
         max-height: 167px;
     }
+
     .top10-rank p {
         font-size: 13.4rem;
         bottom: 46px;
         left: 41px;
     }   
+
      .top10-image {
         width: 123px;
         max-height: 160px;
@@ -149,46 +157,50 @@
 
     .left-arrow {
         left: 5px;
-      }
+    }
       
-      .right-arrow {
+    .right-arrow {
         right: 5px;
-      }
+    }
 
     .arrow img {
         width: 30px;
         height: 40px;
     }
-
 }
 
 @media (min-width: 100px) and (max-width: 480px) {
     .top10-title {
         font-size: 18px;
     }
+
     .top10-card-list {
         gap: 0;
     }
+
     .top10-rank {
         max-height: 150px;
     }
+    
     .top10-rank p {
         font-size: 11.5rem;
         bottom: 40px;
         left: 44px;
-    } 
+    }
+
      .top10-image {
         width: 100px;
         max-height: 140px;
         left: 10px;
     }
+
     .left-arrow {
         left: 5px;
-      }
+    }
       
-      .right-arrow {
+    .right-arrow {
         right: 5px;
-      }
+    }
 
     .arrow img {
         width: 20px;

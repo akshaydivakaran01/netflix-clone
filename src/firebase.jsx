@@ -1,7 +1,22 @@
-import { initializeApp } from "firebase/app"
-import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, updateProfile, signOut, deleteUser, reauthenticateWithCredential, EmailAuthProvider, updatePassword, sendPasswordResetEmail } from "firebase/auth"
-import { getDoc,setDoc, doc, collection, getFirestore, updateDoc , deleteDoc } from "firebase/firestore"
-import { toast } from "react-toastify"
+import { initializeApp } from "firebase/app";
+import { createUserWithEmailAndPassword, 
+         getAuth, 
+         signInWithEmailAndPassword, 
+         updateProfile, 
+         signOut, 
+         deleteUser, 
+         reauthenticateWithCredential, 
+         EmailAuthProvider, 
+         updatePassword, 
+         sendPasswordResetEmail } from "firebase/auth";
+import { getDoc, 
+         setDoc, 
+         doc, 
+         collection, 
+         getFirestore, 
+         updateDoc , 
+         deleteDoc } from "firebase/firestore";
+import { toast } from "react-toastify";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_API_KEY,
@@ -26,8 +41,8 @@ const fetch_Data = async () => {
         if (docSnap.exists()) {
             const data = docSnap.data();
             return {
-                My_List: data.My_List || [],
-                Liked_List: data.Liked_List || []
+                My_List: data?.My_List || [],
+                Liked_List: data?.Liked_List || []
             };
         } 
         else {
@@ -39,7 +54,7 @@ const fetch_Data = async () => {
         toast.error(error.code.split('/')[1].split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '), {
             position: "top-right",
             autoClose: 3000,
-            theme: "colored",
+            theme: "dark",
             closeOnClick: true,
             draggable: true,
         }); 
@@ -72,7 +87,7 @@ const signup = async (name, email, password) => {
         toast.error(error.code.split('/')[1].split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '), {
             position: "top-right",
             autoClose: 3000,
-            theme: "colored",
+            theme: "dark",
             closeOnClick: true,
             draggable: true,
         });
@@ -116,7 +131,7 @@ const deleteUserDetails = async (password) => {
         await deleteDoc(doc(collectionRef, user.uid));
         await deleteUser(user).then(() => {
             toast.success('Account Deleted', {
-                position: "top-right",
+                position: "top-center",
                 autoClose: 3000,
                 theme: "dark",
                 closeOnClick: true,
@@ -228,8 +243,7 @@ const ResetPasswordWithEmail = async (email) => {
         closeOnClick: true,
         draggable: true,
     });
-  })
-  .catch((error) => {
+  }).catch((error) => {
     toast.error(error.code.split('/')[1].split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '), {
         position: "top-right",
         autoClose: 3000,
@@ -280,4 +294,15 @@ const AddToLikes = async (movie_list) => {
 }
 
 
-export {auth, db, signup, login, logout, deleteUserDetails, updateName, changePassword, ResetPasswordWithEmail, AddToMyList, AddToLikes, fetch_Data}
+export {auth, 
+        db, 
+        signup, 
+        login, 
+        logout, 
+        deleteUserDetails, 
+        updateName, 
+        changePassword, 
+        ResetPasswordWithEmail, 
+        AddToMyList, 
+        AddToLikes, 
+        fetch_Data}
