@@ -32,8 +32,10 @@ const Home = () => {
     if (user) {
       navigate('/');
     }
-
-    navigate('/');
+    else
+    {
+      navigate('/signup');
+    }
 
     getData(Data_List.now_playing_movies)
     .then(response => setApiData(response.results[Math.floor(Math.random()*response.results.length)]))
