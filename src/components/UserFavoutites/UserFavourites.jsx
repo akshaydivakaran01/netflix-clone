@@ -4,6 +4,7 @@ import { useAppContext } from '../../context/appContext';
 import play_btn from '../../assets/play_btn.png';
 import close_icon from '../../assets/close_icon.png';
 import { useNavigate } from 'react-router-dom';
+import { AddToMyList , AddToLikes} from '../../firebase';
 
 const UserFavourites = () => {
 
@@ -28,6 +29,20 @@ const removeFromLikedList = (movie) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [])
+
+  const handleUserFavourites = async () => {
+    if(myList){
+      AddToMyList(myList);
+    }
+    if(likedList)
+    {
+      AddToLikes(likedList);
+    }
+};
+
+useEffect(() => {
+    handleUserFavourites();
+}, [myList, likedList])
   
     
   return (

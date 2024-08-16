@@ -84,9 +84,9 @@ const CardPopup = ({ card, isExpanded, setIsExpanded, popupStyle }) => {
         }
     };
     
-      useEffect(() => {
+    useEffect(() => {
         handleUserFavourites();
-      }, [myList, likedList])
+    }, [myList, likedList])
     
 
     return (
