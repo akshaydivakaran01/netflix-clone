@@ -52,7 +52,7 @@ Crafted a responsive and dynamic web application replicating the core functional
 <!-- Live Link Section -->
 ## :link: Live Link
 
-[To-Do List Manager Web App](https://to-do-manager-web.netlify.app/)
+[Netflix Web App Clone](https://net-flix-web-app-clone.netlify.app/signup)
 
 <!-- Screenshots Section -->
 ## :camera: Screenshots
