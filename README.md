@@ -52,7 +52,7 @@ Crafted a responsive and dynamic web application replicating the core functional
 <!-- Live Link Section -->
 ## :link: Live Link
 
-[Netflix Web App Clone](https://net-flix-web-app-clone.netlify.app/signup)
+[Netflix Web App Clone](https://net-flix-web-app-clone.netlify.app/)
 
 <!-- Screenshots Section -->
 ## :camera: Screenshots
