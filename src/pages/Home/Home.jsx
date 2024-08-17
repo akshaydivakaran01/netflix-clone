@@ -10,7 +10,6 @@ import Footer from '../../components/Footer/Footer';
 import { imageUrl, Data_List, getData, getTruncatedText } from '../../constants';
 import UserFavourites from '../../components/UserFavoutites/UserFavourites';
 import { useAppContext } from '../../context/appContext';
-import { auth } from '../../firebase';
 
 const Home = () => {
 
@@ -19,20 +18,13 @@ const Home = () => {
 
   const navigate = useNavigate();
 
-  const {isDisplayFavorites ,setIsDisplayFavorites} = useAppContext();
+  const {isDisplayFavorites} = useAppContext();
 
   const moviesRef = useRef(null);
   const tvShowsRef = useRef(null);
   const popularRef = useRef(null);
-
-  const user = auth.currentUser;
   
   useEffect( () => {
-
-    if (user) {
-      navigate('/');
-    }
-
     getData(Data_List.now_playing_movies)
     .then(response => setApiData(response.results[Math.floor(Math.random()*response.results.length)]))
     .catch(error => {
