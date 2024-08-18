@@ -11,16 +11,16 @@ import { imageUrl, Data_List, getData, getTruncatedText } from '../../constants'
 import UserFavourites from '../../components/UserFavoutites/UserFavourites';
 import { useAppContext } from '../../context/appContext';
 import Spinner from '../../components/Spinner/Spinner';
+import { toast } from 'react-toastify';
 
 const Home = () => {
 
   const [apiData, setApiData] = useState({});
   const [isExpanded, setIsExpanded] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
 
   const navigate = useNavigate();
 
-  const {isDisplayFavorites} = useAppContext();
+  const {isDisplayFavorites, isLoading, setIsLoading} = useAppContext();
 
   const moviesRef = useRef(null);
   const tvShowsRef = useRef(null);
@@ -33,6 +33,7 @@ const Home = () => {
       setIsLoading(false)})
     .catch(error => {
       console.error('Error fetching data:', error);
+      toast.error(error.message)
     });
 
     window.scrollTo(0, 0);
