@@ -3,27 +3,20 @@ import './Login.css';
 import logo from '../../assets/Netflix_Logo.png';
 import { login } from '../../firebase';
 import { useNavigate } from 'react-router-dom';
-import Spinner from '../../components/Spinner/Spinner';
 
 const Login = () => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [loading, setLoading] = useState(false);
 
     const navigate = useNavigate()
 
     const user_auth = async (e) => {
         e.preventDefault();
-        setLoading(true);
         await login(email, password);
-        setLoading(false);
     }
   
     return (
-    loading ? 
-    <Spinner />   
-    :
 
     <div className='login'>
         <img src={logo} 

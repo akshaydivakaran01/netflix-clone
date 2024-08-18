@@ -5,7 +5,7 @@ import Login from './pages/Login/Login';
 import Player from './pages/Player/Player';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth, fetch_Data } from './firebase';
-import { ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import SignUp from './pages/SignUp/SignUp';
 import { useAppContext } from './context/appContext';
@@ -38,6 +38,13 @@ const App = () => {
         };
         await getUserData();
         navigate('/', { replace: true });
+        toast.success(`Signed In as ${user.displayName}`, {
+          position: "top-right",
+          autoClose: 3000,
+          theme: "dark",
+          closeOnClick: true,
+          draggable: true,
+      });
       }
       else{
         navigate('/signup', { replace: true });
