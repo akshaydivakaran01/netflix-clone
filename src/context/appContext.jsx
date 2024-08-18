@@ -10,6 +10,7 @@ export function AppProvider({ children }) {
     const [myList, setMyList] = useState([]);
     const [likedList, setLikedList] = useState([]);
     const [isDisplayFavorites, setIsDisplayFavorites] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     const data = {
         myList, 
@@ -17,7 +18,9 @@ export function AppProvider({ children }) {
         likedList, 
         setLikedList,
         isDisplayFavorites, 
-        setIsDisplayFavorites
+        setIsDisplayFavorites,
+        isLoading, 
+        setIsLoading
     };
 
     return (

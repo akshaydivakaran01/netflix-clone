@@ -63,6 +63,7 @@ const SignupPage = () => {
                 id="password"
                 className="password-input"
                 placeholder="Add a password"
+                autoComplete='new-password'
                 value={password}
                 onChange={(e) => setPassword(e.target.value)} />
             </div>

@@ -89,12 +89,13 @@ const Profile = () => {
         {showModal? 
         (isUpdatePassword? 
             (<div className="modal">
-                <div className="modal-content">
+                <form className="modal-content">
                     <h2> Update Password </h2>
                     <input
                         type="password"
                         className='modal-input'
                         value={password}
+                        autoComplete='current-password'
                         onChange={(e) => setPassword(e.target.value)}
                         placeholder="Current Password"
                     />
@@ -102,6 +103,7 @@ const Profile = () => {
                         type="password"
                         className='modal-input'
                         value={newPassword}
+                        autoComplete='new-password'
                         onChange={(e) => setNewPassword(e.target.value)}
                         placeholder="New Password"
                     /> 
@@ -112,18 +114,19 @@ const Profile = () => {
                         }}>Submit
                     </button>
                     <button className='modal-btn' onClick={() => setShowModal(false)}>Cancel</button>
-                </div>
+                </form>
             </div>)
             
             : 
             
             (<div className="modal">
-                <div className="modal-content">
+                <form className="modal-content">
                     <h2>Re-enter Password to delete account</h2>
                     <input
                         type="password"
                         className='modal-input'
                         value={password}
+                        autoComplete='current-password'
                         onChange={(e) => setPassword(e.target.value)}
                         placeholder="Enter your password"
                     />
@@ -134,7 +137,7 @@ const Profile = () => {
                         Submit
                     </button>
                     <button className='modal-btn' onClick={() => setShowModal(false)}>Cancel</button>
-                </div>
+                </form>
             </div>)) : null}
     </div> 
     

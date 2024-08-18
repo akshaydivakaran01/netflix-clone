@@ -97,7 +97,14 @@ const signup = async (name, email, password) => {
 const login = async (email, password) => {
     try {
         await signInWithEmailAndPassword(auth, email, password);
-        const user = auth.currentUser;        
+        const user = auth.currentUser;
+        toast.success(`Signed In as ${user.displayName}`, {
+            position: "top-right",
+            autoClose: 3000,
+            theme: "dark",
+            closeOnClick: true,
+            draggable: true,
+        });
     } catch (error) {
         console.log(error);
         toast.error(error.code.split('/')[1].split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '), {

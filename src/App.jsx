@@ -5,7 +5,7 @@ import Login from './pages/Login/Login';
 import Player from './pages/Player/Player';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth, fetch_Data } from './firebase';
-import { toast, ToastContainer } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import SignUp from './pages/SignUp/SignUp';
 import { useAppContext } from './context/appContext';
@@ -16,9 +16,7 @@ import Spinner from './components/Spinner/Spinner';
 
 const App = () => {
 
-  const [isLoading, setIsLoading] = useState(true);
-
-  const {setMyList, setLikedList, setIsDisplayFavorites } = useAppContext();
+  const {setMyList, setLikedList, setIsDisplayFavorites, isLoading, setIsLoading } = useAppContext();
 
   const navigate = useNavigate();
 
@@ -26,6 +24,7 @@ const App = () => {
 
   useEffect(() => {
     
+    setIsLoading(true)
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if(user) {
         console.log("Logged In");
@@ -38,13 +37,6 @@ const App = () => {
         };
         await getUserData();
         navigate('/', { replace: true });
-        toast.success(`Signed In as ${user.displayName}`, {
-          position: "top-right",
-          autoClose: 3000,
-          theme: "dark",
-          closeOnClick: true,
-          draggable: true,
-      });
       }
       else{
         navigate('/signup', { replace: true });
@@ -68,13 +60,10 @@ const App = () => {
     }
 }, [location.pathname]);
 
-if (isLoading) {
-  return <Spinner />;
-}
-
   return (
     <>
       < ToastContainer theme='dark' pauseOnHover= {false}/>
+      {isLoading? < Spinner  /> : <Routes />}
       < Routes >
         {auth.currentUser ? (
         <>
