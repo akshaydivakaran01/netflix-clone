@@ -10,11 +10,13 @@ import Footer from '../../components/Footer/Footer';
 import { imageUrl, Data_List, getData, getTruncatedText } from '../../constants';
 import UserFavourites from '../../components/UserFavoutites/UserFavourites';
 import { useAppContext } from '../../context/appContext';
+import Spinner from '../../components/Spinner/Spinner';
 
 const Home = () => {
 
   const [apiData, setApiData] = useState({});
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const navigate = useNavigate();
 
@@ -26,7 +28,9 @@ const Home = () => {
   
   useEffect( () => {
     getData(Data_List.now_playing_movies)
-    .then(response => setApiData(response.results[Math.floor(Math.random()*response.results.length)]))
+    .then(response => {
+      setApiData(response.results[Math.floor(Math.random()*response.results.length)])
+      setIsLoading(false)})
     .catch(error => {
       console.error('Error fetching data:', error);
     });
@@ -51,6 +55,10 @@ const Home = () => {
       });
     }
   };
+
+  if (isLoading) {
+    return <Spinner />;
+  }
   
   return (
     <div className='home'>
