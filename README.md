@@ -62,7 +62,7 @@ Crafted a responsive and dynamic web application replicating the core functional
 ![Screenshot (96)](https://github.com/user-attachments/assets/11178002-21c7-476e-8ad9-86fb06cdaf7a)
 ### :heavy_check_mark: Sign In Page (User Login)
 ![Screenshot (97)](https://github.com/user-attachments/assets/0bc085b3-44f6-4585-b86e-b1067320648c)
-### :lock: Forgot Password Help
+### :key: Forgot Password Help
 ![Screenshot (98)](https://github.com/user-attachments/assets/3963d526-21af-4959-9e0e-23c5d6562a03)
 ### :house: Home Page #1
 ![Screenshot (99)](https://github.com/user-attachments/assets/4df59a3d-7a91-4f03-99ab-262351bb5dcb)
