@@ -3,7 +3,7 @@
 
 <!-- Description Section -->
 ## :books: Description
-Crafted a responsive and dynamic web application replicating the core functionalities of Netflix using React JS. The project includes features such as secure user authentication, a Netflix-inspired interface for browsing and displaying detailed movie information, and the ability for users to add or remove movies from their favourite list. The design includes a video player for streaming movie trailers and related clips, all while ensuring the interface remains sleek and user-friendly, closely mimicking the latest Netflix platform.
+Crafted a responsive and dynamic web application replicating the core functionalities of Netflix using React JS. The project includes features such as secure user authentication, a Netflix-inspired interface for browsing and displaying detailed movie information, and the ability for users to add or remove movies from their favorites list. The design includes a video player for streaming movie trailers and related clips, all while ensuring the interface remains sleek and user-friendly, closely mimicking the latest Netflix platform.
 
 ### :name_badge: Key Features
 
