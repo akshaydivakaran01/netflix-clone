@@ -66,7 +66,7 @@ Crafted a responsive and dynamic web application replicating the core functional
 ![Screenshot (98)](https://github.com/user-attachments/assets/3963d526-21af-4959-9e0e-23c5d6562a03)
 ### :house: Home Page #1
 ![Screenshot (99)](https://github.com/user-attachments/assets/4df59a3d-7a91-4f03-99ab-262351bb5dcb)
-### :house: Home Page #2 (Movies/Tv Shows Listing)
+### :house: Home Page #2 (Movies/TV Shows Listing)
 ![Screenshot 2024-08-17 131044](https://github.com/user-attachments/assets/411a3ffa-a1d9-4fca-b589-6293c4aa7402)
 ### :arrow_forward: Movie Player)
 ![Screenshot (106)](https://github.com/user-attachments/assets/f6349a2a-3c4b-41d4-a6f7-e3677d1dad93)
