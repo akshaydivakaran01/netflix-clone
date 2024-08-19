@@ -56,18 +56,26 @@ Crafted a responsive and dynamic web application replicating the core functional
 
 <!-- Screenshots Section -->
 ## :camera: Screenshots
-### :date: Create Task (Home Page)
-![Screenshot 2024-07-24 204444](https://github.com/user-attachments/assets/92b9bd32-c106-4484-9bb4-97bd52af0e73)
-### :bookmark_tabs: View Active To Dos
-![Screenshot 2024-07-24 204509](https://github.com/user-attachments/assets/4b20782a-d3d6-4acf-bb3d-4588bb7f8922)
-### :heavy_check_mark: View Completed To Dos
-![Screenshot 2024-07-24 214008](https://github.com/user-attachments/assets/7ba6a762-e72e-47fc-bfe2-104850e381c2)
-### :pencil: Edit To Dos
-![Screenshot 2024-07-24 214221](https://github.com/user-attachments/assets/22181029-acfb-4d9f-92cc-0a2b35650496)
+### :checkered_flag: Get Started
+![Screenshot (95)](https://github.com/user-attachments/assets/b6ac6238-1f0c-4cd7-8e0a-5c67c0df767d)
+### :heavy_plus_sign: Sign Up Page (Create Account)
+![Screenshot (96)](https://github.com/user-attachments/assets/11178002-21c7-476e-8ad9-86fb06cdaf7a)
+### :heavy_check_mark: Sign In Page (User Login)
+![Screenshot (97)](https://github.com/user-attachments/assets/0bc085b3-44f6-4585-b86e-b1067320648c)
+### :lock: Forgot Password Help
+![Screenshot (98)](https://github.com/user-attachments/assets/3963d526-21af-4959-9e0e-23c5d6562a03)
+### :house: Home Page #1
+![Screenshot (99)](https://github.com/user-attachments/assets/4df59a3d-7a91-4f03-99ab-262351bb5dcb)
+### :house: Home Page #2 (Movies/Tv Shows Listing)
+![Screenshot 2024-08-17 131044](https://github.com/user-attachments/assets/411a3ffa-a1d9-4fca-b589-6293c4aa7402)
+### :arrow_forward: Movie/Tv show Player)
+![Screenshot (106)](https://github.com/user-attachments/assets/f6349a2a-3c4b-41d4-a6f7-e3677d1dad93)
+### :heart_decoration: User Favorites Collection
+![Screenshot (101)](https://github.com/user-attachments/assets/7147187a-2be1-4a52-88fc-b8cdcfe6420b)
+### :information_source: Manage User Profile (Update Name and Password)
+![Screenshot (102)](https://github.com/user-attachments/assets/9bbafc2a-fcf7-4494-971e-728417837c1b)
 ### :computer: Seamless on Any Screen
-![Responsive (1)](https://github.com/user-attachments/assets/3579db99-6235-4e3e-bcff-b4f132536e76)
+![Responsive](https://github.com/user-attachments/assets/d4642d75-efe0-4915-b68c-b64846fb7ed5)
 
 <!-- Demo Section -->
-## :clapper: Demo
-
-https://github.com/user-attachments/assets/221c5114-c290-4f18-a349-0eddda232ea9
+<!--## :clapper: Demo-->
