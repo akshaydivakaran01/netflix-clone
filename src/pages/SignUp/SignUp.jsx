@@ -5,6 +5,8 @@ import right_arrow from '../../assets/right_arrow.png';
 import { useNavigate } from 'react-router-dom';
 import { signup } from '../../firebase';
 import { toast } from 'react-toastify';
+import { useAppContext } from '../../context/appContext';
+import Spinner from '../../components/Spinner/Spinner';
 
 const SignupPage = () => {
 
@@ -12,6 +14,8 @@ const SignupPage = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const { isLoading, setIsLoading } = useAppContext();
 
   const navigate = useNavigate(null);
 
@@ -23,11 +27,16 @@ const SignupPage = () => {
       if (!password) toast.error('Password is required.', { autoClose: 3000 });
     } 
     else {
+      setIsLoading (true);
       await signup(name, email, password);
+      setIsLoading (false);
     }
     };
 
   return (
+    isLoading ? 
+    <Spinner />   
+    :
     getForm ? 
     <div className="register-form">
       <header className="header">

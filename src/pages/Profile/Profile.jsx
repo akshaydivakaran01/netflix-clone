@@ -7,6 +7,8 @@ import delete_icon from '../../assets/delete_icon.png';
 import back_icon from '../../assets/back_icon.png';
 import { logout, deleteUserDetails, auth, updateName, changePassword } from '../../firebase';
 import { useNavigate } from 'react-router-dom';
+import { useAppContext } from '../../context/appContext';
+import Spinner from '../../components/Spinner/Spinner';
 
 const Profile = () => {
 
@@ -17,11 +19,17 @@ const Profile = () => {
     const [newPassword, setNewPassword] = useState('');
     const [isUpdatePassword, setIsUpdatePassword] = useState(false)
 
+    const { isLoading, setIsLoading } = useAppContext();
+
     const navigate = useNavigate(null)
 
     const user = auth.currentUser;
 
     return (
+    isLoading ? 
+    <Spinner />   
+    :
+
     user ?
     <div className="profile-page">
         <header className="header-bar">
@@ -130,9 +138,11 @@ const Profile = () => {
                         onChange={(e) => setPassword(e.target.value)}
                         placeholder="Enter your password"
                     />
-                    <button className='modal-btn' onClick={() => {
-                        deleteUserDetails(password);
+                    <button className='modal-btn' onClick={ async () => {
+                        setIsLoading(true)
+                        await deleteUserDetails(password);
                         setShowModal(false);
+                        setIsLoading(false)
                     }}>
                         Submit
                     </button>
