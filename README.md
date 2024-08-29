@@ -67,4 +67,4 @@ Crafted a responsive and dynamic web application replicating the core functional
 <!-- Demo Section -->
 ## :clapper: Demo
 
-### :arrow_forward: [Netflix Web App Clone - Watch the Demo Video](https://net-flix-web-app-clone.netlify.app/)
+### :arrow_forward: [Netflix Web App Clone - Watch the Demo Video](https://youtu.be/J8ZnUpaVB1Q)
