@@ -93,7 +93,7 @@ const CardPopup = ({ card, isExpanded, setIsExpanded, popupStyle }) => {
         <div className='popup' style={popupStyle}>
             <img className='popup-poster' src={`https://image.tmdb.org/t/p/w500` + card.backdrop_path} alt="Poster" />
             <div className="popup-info">
-                <h3>{card.title}</h3>
+                <h3>{card.title ? card.title : card.name}</h3>
                 <p>
                     { isExpanded ? card?.overview : getTruncatedText(card?.overview, 80) }
                     { card?.overview?.length > 80 && (
