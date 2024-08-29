@@ -55,7 +55,7 @@ Crafted a responsive and dynamic web application replicating the core functional
 ![Screenshot (99)](https://github.com/user-attachments/assets/4df59a3d-7a91-4f03-99ab-262351bb5dcb)
 ### :house: Home Page #2 (Movies/TV Shows Listing)
 ![Screenshot 2024-08-17 131044](https://github.com/user-attachments/assets/411a3ffa-a1d9-4fca-b589-6293c4aa7402)
-### :arrow_forward: Movie Player)
+### :arrow_forward: Movie Player
 ![Screenshot (106)](https://github.com/user-attachments/assets/f6349a2a-3c4b-41d4-a6f7-e3677d1dad93)
 ### :heart_decoration: User Favorites Collection
 ![Screenshot (101)](https://github.com/user-attachments/assets/7147187a-2be1-4a52-88fc-b8cdcfe6420b)
@@ -65,4 +65,6 @@ Crafted a responsive and dynamic web application replicating the core functional
 ![Responsive](https://github.com/user-attachments/assets/d4642d75-efe0-4915-b68c-b64846fb7ed5)
 
 <!-- Demo Section -->
-<!--## :clapper: Demo-->
+## :clapper: Demo
+
+### :arrow_forward: [Netflix Web App Clone - Watch the Demo Video](https://net-flix-web-app-clone.netlify.app/)
